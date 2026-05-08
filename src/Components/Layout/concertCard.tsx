@@ -41,7 +41,7 @@ return (
             <div className="absolute -inset-0.5 bg-linear-to-r from-primary to-blue-500 rounded-full blur-2xl opacity-20 animate-pulse md:hidden"></div>
             <div className="relative bg-linear-to-br from-gray-100 to-white dark:from-gray-900 dark:to-black p-1 rounded-3xl border border-gray-200 dark:border-gray-800/50 shadow-xl shadow-primary/5 overflow-hidden w-full max-w-md mx-auto md:max-w-none backdrop-blur-sm">
               <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent opacity-50"></div>
-              <img src="src\assets\concert.png"alt="IPTV Service"className="mx-auto rounded-3xl h-[600px] w-[600px]"/>
+              <img src="src\assets\concert.png"alt="Concert"className="mx-auto rounded-3xl h-[600px] w-[600px]"/>
               <h2></h2>
             </div>
             
