@@ -1,76 +1,35 @@
-import Mami from "../Artists/Mami 1.png"
-import ElHassani from "../Artists/El HAssani.png"
-import SaidaFikri from "../Artists/Saida-Fikri 1.png"
-import MaherZain from "../Artists/Maher_Zain 1.png"
-import SamiYusuf from "../Artists/sy_wpm_30 1.png"
+import Data from "../Data/ArtistsData"
+import { Link } from "react-router-dom";
 
 export const Program = () => {
     return (
-    <div className=" w-full min-h-screen gap-4 flex-wrap flex justify-center items-center z-40">
-        
-        <div className="w-60 p-2 bg-white rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
-            <img className="h-60 w-90  object-fit rounded-xl "  src={SamiYusuf} alt="" />
-<div className="p-2">
-<h2 className="font-bold text-4xl mb-2">SAMI YUSUF</h2>
-<p className="text-sm font-semibold text-gray-600">Sami Yusuf is a British singer, songwriter, multi-instrumentalist and composer of Azerbaijani descent. </p>
+        <div className="w-full min-h-screen flex flex-col items-center z-40 pb-20">
+            
+            <div className="w-full max-w-[1300px] flex flex-col justify-start px-8 pt-15 pb-12">
+                <h1 className="text-4xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-[#ac0808] to-[#d60020] tracking-tight leading-tight mb-6">
+                    THE MAWAZINE 2026 <br className="hidden md:block"/> BEAT PROGRAM
+                </h1>
+                <h3 className="font-medium text-gray-300 text-lg md:text-2xl max-w-4xl leading-relaxed">
+                    Festival returns for its 21st edition in 2026, transforming Rabat and Salé into a global stage for nine days. With over 90 acts across 7 major stages, it remains the largest music festival in the world by attendance.
+                </h3>
+            </div>
 
-</div>
-<div className="m-2">
-    <button className="text-white font-semibold bg-red-600 py-2 px-3 rounded-3xl hover:bg-red-700 ">Learn More</button>
-</div>
+            
+            <div className="w-full max-w-[1300px] px-8 flex flex-nowrap overflow-x-auto pb-8 justify-start gap-1 items-stretch snap-x">
+                {Data.map((artist) => (
+                    <div key={artist.id} className="w-60 shrink-0 snap-start flex flex-col p-2 bg-white rounded-xl transform transition-all hover:-translate-y-1 duration-300 shadow-lg hover:shadow-2xl">
+                        <img className="h-56 w-full object-cover object-top rounded-xl" src={artist.image as string} alt={artist.name} />
+                        <div className="p-2 flex flex-col grow">
+                            <h3 className="w-fit mb-2 rounded-3xl px-3 py-1 bg-gray-600 text-white text-xs font-bold uppercase tracking-wide">{artist.Category}</h3>
+                            <h2 className="font-bold text-2xl mb-1 truncate">{artist.name}</h2>
+                            <p className="text-sm font-semibold text-gray-600 line-clamp-3">{artist.description}</p>
+                        </div>
+                        <div className="m-2 mt-auto">
+                            <Link to={`/artist/${artist.id}`} className="block w-full text-center text-white font-semibold cursor-pointer bg-red-600 py-2 px-3 rounded-3xl hover:bg-red-700">Learn More</Link>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
-
-         <div className="w-60 p-2 bg-white rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
-            <img className="h-60 w-90  object-cover rounded-xl "  src={Mami} alt="" />
-<div className="p-2">
-<h2 className="font-bold text-4xl mb-2">CHEB MAMI</h2>
-<p className="text-sm font-semibold text-gray-600">Mohamed Khelifati, better known by his stage name Cheb Mami, is an Algerian raï musician and singer-songwriter.</p>
-
-</div>
-<div className="m-2">
-    <button className="text-white font-semibold bg-red-600 py-2 px-3 rounded-3xl hover:bg-red-700 ">Learn More</button>
-</div>
-        </div>
-
-         <div className="w-60 p-2 bg-white rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
-            <img className="h-60 w-90  object-cover rounded-xl "  src={ElHassani} alt="" />
-<div className="p-2">
-<h2 className="font-bold text-4xl mb-2">EL HASSANI</h2>
-<p className="text-sm font-semibold text-gray-600">Moulay Ahmed Al-Hassani, an artist born in 1960, came to life in the city of Zaouia Al-Sheikh in the Middle Atlas.</p>
-
-</div>
-<div className="m-2">
-    <button className="text-white font-semibold bg-red-600 py-2 px-3 rounded-3xl hover:bg-red-700 ">Learn More</button>
-</div>
-        </div>
-
-
-         <div className="w-60 p-2 bg-white rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
-            <img className="h-60 w-60  object-fit rounded-xl "  src={SaidaFikri} alt="" />
-<div className="p-2">
-<h2 className="font-bold text-4xl mb-2">SAIDA FIKRI</h2>
-<p className="text-sm font-semibold text-gray-600">Mohamed Khelifati, better known by his stage name Cheb Mami, is an Algerian raï musician and singer-songwriter.</p>
-
-</div>
-<div className="m-2">
-    <button className="text-white font-semibold bg-red-600 py-2 px-3 rounded-3xl hover:bg-red-700 ">Learn More</button>
-</div>
-        </div>
-
-
-         <div className="w-60 p-2 bg-white rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
-            <img className="h-60 w-90  object-fit rounded-xl "  src={MaherZain} alt="" />
-<div className="p-2">
-<h2 className="font-bold text-4xl mb-2">MAHER ZAIN</h2>
-<p className="text-sm font-semibold text-gray-600">Maher Zain is a Lebanese-Swedish Islamic Nasheeds and R&B singer, songwriter and music producer.</p>
-
-</div>
-<div className="m-2">
-    <button className="text-white font-semibold bg-red-600 py-2 px-3 rounded-3xl hover:bg-red-700 ">Learn More</button>
-</div>
-        </div>
-
-    </div>
-    
     );
 }

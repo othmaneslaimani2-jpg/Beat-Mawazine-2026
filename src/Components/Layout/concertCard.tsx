@@ -11,7 +11,7 @@ return (
           <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-blue-500/20 rounded-full filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
         </div>
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-76 items-center relative z-10">
+        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 lg:gap-24 items-center relative z-10">
           <div className="space-y-6 text-center md:text-left">
             <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-white text-sm font-medium mb-2  ">
               FESTIVAL MAWAZINE BEAT 2026
@@ -41,7 +41,7 @@ return (
             <div className="absolute -inset-0.5 bg-linear-to-r from-primary to-blue-500 rounded-full blur-2xl opacity-20 animate-pulse md:hidden"></div>
             <div className="relative bg-linear-to-br from-gray-100 to-white dark:from-gray-900 dark:to-black p-1 rounded-3xl border border-gray-200 dark:border-gray-800/50 shadow-xl shadow-primary/5 overflow-hidden w-full max-w-md mx-auto md:max-w-none backdrop-blur-sm">
               <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent opacity-50"></div>
-              <img src="src\assets\concert.png"alt="Concert"className="mx-auto rounded-3xl h-[600px] w-[600px]"/>
+              <img src="src\assets\concert.png" alt="Concert" className="w-full h-[350px] md:h-[450px] lg:h-[600px] object-cover rounded-3xl"/>
               <h2></h2>
             </div>
             

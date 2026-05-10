@@ -3,6 +3,9 @@ import { Navbar } from "./Components/Layout/Navbar";
 import { Home } from "./Components/Home/home";
 import { Program } from "./Components/pages/Program";
 import { Schedule } from "./Components/pages/Schedule";
+import { Passport } from "./Components/pages/Passport";
+import { Favorite } from "./Components/pages/Favorite";
+import DetailsArtist from "./Components/pages/ArtistDetails";
 import LightRays from "./LightRays";
 
 function App() {
@@ -10,7 +13,7 @@ function App() {
     <>
       <main>
         <div style={{ width: "100%", minHeight: "100vh", position: "relative" }}>
-          <div className=" absolute top-0 left-0 w-screen h-screen -z-30 bg-[#1a1a1a] ">
+          <div className="fixed top-0 left-0 w-screen h-screen -z-30 bg-[#1a1a1a] ">
             <LightRays
               raysOrigin="top-center"
               raysColor="#dc1e1e"
@@ -28,13 +31,16 @@ function App() {
             />
           </div>
           <BrowserRouter>
-          <div className="z-40 pl-40 pr-40 pt-5">
+          <div className="z-40 px-4 md:px-20 lg:px-40 pt-5">
             <Navbar />
           </div>
           <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/Program" element={<Program/>}></Route>
           <Route path="/Schedule" element={<Schedule/>}></Route>
+          <Route path="/Passport" element={<Passport/>}></Route>
+          <Route path="/Favorite" element={<Favorite />}></Route>
+          <Route path="/artist/:id" element={<DetailsArtist />}></Route>
           </Routes>
 </BrowserRouter>
         </div>
